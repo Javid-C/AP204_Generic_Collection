@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 
 namespace AP204_Generics_Collections
 {
@@ -147,149 +148,308 @@ namespace AP204_Generics_Collections
             #endregion
 
             #region Collections
-            ArrayList arrayList = new ArrayList();
+            //ArrayList arrayList = new ArrayList();
 
-            arrayList.Add("Shemsi");
-            arrayList.Add('A');
-            arrayList.Add(100);
-            arrayList.Add(100.5d);
-            arrayList.Add(computer);
-
-            
-
-            foreach (object item in arrayList)
-            {
-                if(item is Computer)
-                {
-                    Computer comp = (Computer)item;
-                    comp.Test();
-                }
-                Console.WriteLine(item);
-            }
-
-            ArrayList arrayList1 = new ArrayList();
-
-            arrayList1.Add("Rashid");
-            arrayList1.Add('B');
-            arrayList1.Add(100);
-            arrayList1.Add(computer1);
-
-            arrayList.AddRange(arrayList1);
-
-            Console.WriteLine("After add range");
-            foreach (var item in arrayList)
-            {
-                Console.WriteLine(item);
-            }
-
-            arrayList.Remove(computer);
-
-            Console.WriteLine("After delete \n");
-            foreach (var item in arrayList)
-            {
-                Console.WriteLine(item);
-            }
-
-            Console.WriteLine("After remove at \n");
-            arrayList.RemoveAt(2);
-            foreach (var item in arrayList)
-            {
-                Console.WriteLine(item);
-            }
-
-            arrayList.RemoveRange(3,2);
-            Console.WriteLine("After remove range\n");
-
-            foreach (var item in arrayList)
-            {
-                Console.WriteLine(item);
-            }
+            //arrayList.Add("Shemsi");
+            //arrayList.Add('A');
+            //arrayList.Add(100);
+            //arrayList.Add(100.5d);
+            //arrayList.Add(computer);
 
 
-            SortedList sortedList = new SortedList();
 
-            sortedList.Add(1,"Fatima");
-            sortedList.Add(3,"Ilkin");
-            sortedList.Add(2,"Vahid");
-            sortedList.Add(4,"Rashid");
+            //foreach (object item in arrayList)
+            //{
+            //    if(item is Computer)
+            //    {
+            //        Computer comp = (Computer)item;
+            //        comp.Test();
+            //    }
+            //    Console.WriteLine(item);
+            //}
 
-            //sortedList.RemoveAt(2);
+            //ArrayList arrayList1 = new ArrayList();
 
-            foreach (DictionaryEntry item in sortedList)
-            {
-                Console.WriteLine(item.Value);
-            }
+            //arrayList1.Add("Rashid");
+            //arrayList1.Add('B');
+            //arrayList1.Add(100);
+            //arrayList1.Add(computer1);
 
+            //arrayList.AddRange(arrayList1);
 
-            Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
+            //Console.WriteLine("After add range");
+            //foreach (var item in arrayList)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
-            //keyValuePairs.Add('c',"Fazil");
-            //keyValuePairs.Add('a',"Malik");
-            //keyValuePairs.Add('b',"Tural");
+            //arrayList.Remove(computer);
 
-            keyValuePairs.Add("USA","Kentucky, Alaska, Texas, California, Los Angeles");
-            keyValuePairs.Add("Germany","Frankfurt, Berlin, Koln");
-            keyValuePairs.Add("Turkey","Istanbul, Izmir, Bursa, Ankara, Urfa");
-            keyValuePairs.Add("Azerbaijan","Kurdemir, Agcebedi, Zig, Saatli, Zenguzar");
-            bool result  = keyValuePairs.TryAdd("Azerbaycan","Kurdemir, Agcebedi, Zig, Saatli, Zenguzar");
+            //Console.WriteLine("After delete \n");
+            //foreach (var item in arrayList)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
-            if (result)
-            {
-                Console.WriteLine("Zenguzar azad edildi");
-            }
-            else
-            {
-                Console.WriteLine("Bele bir sey yoxdu");
-            }
+            //Console.WriteLine("After remove at \n");
+            //arrayList.RemoveAt(2);
+            //foreach (var item in arrayList)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
-            keyValuePairs.Clear();
+            //arrayList.RemoveRange(3,2);
+            //Console.WriteLine("After remove range\n");
 
-            foreach (var item in keyValuePairs)
-            {
-                Console.WriteLine(item.Value);
-            }
-
-
-            Queue<string> queue = new Queue<string>();
-
-            queue.Enqueue("Baxsheli");
-            queue.Enqueue("Murad");
-            queue.Enqueue("Ali");
-
-            Console.WriteLine("Novbe: " + queue.Dequeue()); 
-            Console.WriteLine("Novbe: " + queue.Dequeue()); 
-            Console.WriteLine("Novbe: " + queue.Dequeue());
-            string name;
-            Console.WriteLine("Novbe: " + queue.TryDequeue(out name)); 
-            Console.WriteLine("Hazirlashin: " + queue.TryPeek(out name));
+            //foreach (var item in arrayList)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
 
-            Console.WriteLine("Novbedekiler");
-            foreach (var item in queue)
-            {
-                Console.WriteLine(item);
-            }
+            //SortedList sortedList = new SortedList();
+
+            //sortedList.Add(1,"Fatima");
+            //sortedList.Add(3,"Ilkin");
+            //sortedList.Add(2,"Vahid");
+            //sortedList.Add(4,"Rashid");
+
+            ////sortedList.RemoveAt(2);
+
+            //foreach (DictionaryEntry item in sortedList)
+            //{
+            //    Console.WriteLine(item.Value);
+            //}
 
 
-            Stack<string> stack = new Stack<string>();
+            //Dictionary<string, string> keyValuePairs = new Dictionary<string, string>();
 
-            stack.Push("Shemsi");
-            stack.Push("Fatima");
-            stack.Push("Islam");
+            ////keyValuePairs.Add('c',"Fazil");
+            ////keyValuePairs.Add('a',"Malik");
+            ////keyValuePairs.Add('b',"Tural");
 
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine(stack.Pop());
-            Console.WriteLine("Novbe: " + stack.Peek());
+            //keyValuePairs.Add("USA","Kentucky, Alaska, Texas, California, Los Angeles");
+            //keyValuePairs.Add("Germany","Frankfurt, Berlin, Koln");
+            //keyValuePairs.Add("Turkey","Istanbul, Izmir, Bursa, Ankara, Urfa");
+            //keyValuePairs.Add("Azerbaijan","Kurdemir, Agcebedi, Zig, Saatli, Zenguzar");
+            //bool result  = keyValuePairs.TryAdd("Azerbaycan","Kurdemir, Agcebedi, Zig, Saatli, Zenguzar");
 
-            foreach (var item in stack)
-            {
-                Console.WriteLine(item);
-            }
+            //if (result)
+            //{
+            //    Console.WriteLine("Zenguzar azad edildi");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Bele bir sey yoxdu");
+            //}
+
+            //keyValuePairs.Clear();
+
+            //foreach (var item in keyValuePairs)
+            //{
+            //    Console.WriteLine(item.Value);
+            //}
+
+
+            //Queue<string> queue = new Queue<string>();
+
+            //queue.Enqueue("Baxsheli");
+            //queue.Enqueue("Murad");
+            //queue.Enqueue("Ali");
+
+            //Console.WriteLine("Novbe: " + queue.Dequeue()); 
+            //Console.WriteLine("Novbe: " + queue.Dequeue()); 
+            //Console.WriteLine("Novbe: " + queue.Dequeue());
+            //string name;
+            //Console.WriteLine("Novbe: " + queue.TryDequeue(out name)); 
+            //Console.WriteLine("Hazirlashin: " + queue.TryPeek(out name));
+
+
+            //Console.WriteLine("Novbedekiler");
+            //foreach (var item in queue)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+            //Stack<string> stack = new Stack<string>();
+
+            //stack.Push("Shemsi");
+            //stack.Push("Fatima");
+            //stack.Push("Islam");
+
+            //Console.WriteLine(stack.Pop());
+            //Console.WriteLine(stack.Pop());
+            //Console.WriteLine(stack.Pop());
+            //Console.WriteLine(stack.Pop());
+            //Console.WriteLine("Novbe: " + stack.Peek());
+
+            //foreach (var item in stack)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+            //List<int> list = new List<int>();
+
+            //list.Add(6);
+            //list.Add(3);
+            //list.Add(1);
+
+            //foreach (var item in list)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.WriteLine("Before new List");
+            //List<int> vs = new List<int>();
+            //vs.Add(5);
+            //vs.Add(2);
+            //vs.Add(4);
+            //list.AddRange(vs);
+
+
+            //Console.WriteLine("After add range");
+
+            //list.Sort();
+            //list.Clear();
+
+            //list.Remove(5);
+            //list.Remove(2);
+            //list.RemoveAt(2);
+
+            //list.RemoveRange(2, 2);
+            //foreach (var item in list)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //int number = list.Find(x=>x==5);
+
+            //bool result = list.Contains(7);
+
+            //Console.WriteLine(result);
+            //Console.WriteLine(number);
+
+            //Console.WriteLine(list[8]);
+
+            //List<Student> students = new List<Student>();
+
+            //Student student1 = new Student();
+            //student1.GroupNo = "Test";
+            //students.Add(student1);
+
+            //students.Add(new Student()
+            //{
+            //    GroupNo = "AP204"
+            //});
+            //students.Add(new Student()
+            //{
+            //    GroupNo = "AP205"
+            //});
+            //students.Add(new Student()
+            //{
+            //    GroupNo = "AP206"
+            //});
+
+            //foreach (Student student in students)
+            //{
+            //    Console.WriteLine(student.GroupNo);
+            //}
+
+            //Products products = new Products();
+
+            //products.Add("Milk");
+            //products.Add("Tea");
+            //products.Add("Cola");
+
+            //foreach (var item in products.GetElements())
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //Console.WriteLine(products[3]);
+
+
+            string word = "bes yuzelli";
+
+            Console.WriteLine(word.customContains("s y"));
             #endregion
 
 
         }
+    }
+
+
+    static class Extension
+    {
+        public static bool customContains(this string word, string search)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int i = 0; i <= word.Length - search.Length; i++)
+            {
+                for (int j = i; j < search.Length + i; j++)
+                {
+                    stringBuilder.Append(word[j]);
+                }
+
+                if (stringBuilder.ToString().ToLower() == search.ToLower())
+                {
+                    return true;
+                }
+                stringBuilder.Clear();
+            }
+            return false;
+        }
+    }
+
+    class Student
+    {
+        public string GroupNo;
+
+        
+    }
+
+    class Products
+    {
+        private string[] arr;
+
+        public Products()
+        {
+            arr = new string[0];
+        }
+
+        public string this[int index]
+        {
+            get
+            {
+                if(index<0 || arr.Length >= index)
+                {
+                    throw new IndexOutOfRangeException("Product index");
+                }
+                return arr[index];
+            }
+            set
+            {
+                if (index > 0)
+                {
+                    Array.Resize(ref arr, arr.Length + 1);
+                    arr[arr.Length - 1] = value;
+                }
+            }
+        }
+
+
+        public void Add(string product)
+        {
+            Array.Resize(ref arr, arr.Length + 1);
+            arr[arr.Length-1] = product;
+        }
+
+
+        public string[] GetElements()
+        {
+            return arr;
+        }
+
     }
 }
